@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calories Burnt Prediction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <h1>Calories Burnt Prediction</h1>
+          <p class="subtitle">
+            Enter your physical and activity data to estimate calories burnt using machine learning.
+          </p>
+        </div>
+
+        <form id="predictionForm">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="Gender">Gender</label>
+              <select id="Gender" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="Age">Age</label>
+              <input type="number" id="Age" placeholder="Enter age" required />
+            </div>
+
+            <div class="form-group">
+              <label for="Height">Height (cm)</label>
+              <input type="number" id="Height" placeholder="Enter height" required />
+            </div>
+
+            <div class="form-group">
+              <label for="Weight">Weight (kg)</label>
+              <input type="number" id="Weight" placeholder="Enter weight" required />
+            </div>
+
+            <div class="form-group">
+              <label for="Duration">Duration (min)</label>
+              <input type="number" id="Duration" placeholder="Enter duration" required />
+            </div>
+
+            <div class="form-group">
+              <label for="Heart_Rate">Heart Rate</label>
+              <input type="number" id="Heart_Rate" placeholder="Enter heart rate" required />
+            </div>
+
+            <div class="form-group">
+              <label for="Body_Temp">Body Temperature (°C)</label>
+              <input type="number" step="0.1" id="Body_Temp" placeholder="Enter body temperature" required />
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" class="predict-btn">Predict</button>
+            <button type="button" class="reset-btn" id="resetBtn">Reset</button>
+          </div>
+        </form>
+
+        <div id="result" class="result-box">
+          <span class="result-label">Result:</span>
+          <span id="resultText">No prediction yet.</span>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Developed for PFA Project — Calories Burnt Prediction Using Machine Learning</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
